@@ -39,7 +39,7 @@ fun MainScreen(navController: NavController) {
         modifier = Modifier
             .fillMaxSize()
             .background(brush = Brush.linearGradient(
-                colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                 start = androidx.compose.ui.geometry.Offset.Zero,
                 end = androidx.compose.ui.geometry.Offset.Infinite
             )).padding(16.dp)
@@ -63,12 +63,13 @@ fun MainScreen(navController: NavController) {
                 .fillMaxWidth()
                 .padding(vertical = 8.dp)
         ) {
-            itemslevel("Eжелгі заман тарихы")
+            itemslevel("Eжелгі дүние тарихы")
         }
 
         Button(
             onClick = {
-                navController.navigate("secondmain")
+                Levelofhistory.level = "second"
+                navController.navigate("allessons")
             },
             colors = ButtonColors(
                 containerColor = Color.Transparent,
@@ -80,7 +81,7 @@ fun MainScreen(navController: NavController) {
                 .fillMaxWidth()
                 .padding(vertical = 8.dp)
         ) {
-            itemslevel("Орта заман тарихы")
+            itemslevel("Орта ғасыр тарихы")
         }
 
         Button(
@@ -98,85 +99,13 @@ fun MainScreen(navController: NavController) {
                 .fillMaxWidth()
                 .padding(vertical = 8.dp)
         ) {
-            itemslevel("Жаңа және Қазіргі заман тарихы")
+            itemslevel("Жаңа заман және Африка тарихы")
         }
     }
 }
 
 
 
-
-
-@Composable
-fun Screenfor2(navController: NavController) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(brush = Brush.linearGradient(
-                colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
-                start = androidx.compose.ui.geometry.Offset.Zero,
-                end = androidx.compose.ui.geometry.Offset.Infinite
-            )).padding(16.dp)
-
-        ,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Button(
-            onClick = {
-                Levelofhistory.level = "second1"
-                navController.navigate("allessons")
-            },
-            colors = ButtonColors(
-                containerColor = Color.Transparent,
-                contentColor = Color.Transparent ,
-                disabledContentColor = Color.Transparent,
-                disabledContainerColor = Color.Transparent
-            ),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 8.dp)
-        ) {
-            itemslevel("Түркі кезең")
-        }
-
-        Button(
-            onClick = {
-                Levelofhistory.level = "second2"
-                navController.navigate("allessons")
-            },
-            colors = ButtonColors(
-                containerColor = Color.Transparent,
-                contentColor = Color.Transparent ,
-                disabledContentColor = Color.Transparent,
-                disabledContainerColor = Color.Transparent
-            ),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 8.dp)
-        ) {
-            itemslevel("Маңғол кезеңі ")
-        }
-
-        Button(
-            onClick = {
-                Levelofhistory.level = "second3"
-                navController.navigate("allessons")
-            },
-            colors = ButtonColors(
-                containerColor = Color.Transparent,
-                contentColor = Color.Transparent ,
-                disabledContentColor = Color.Transparent,
-                disabledContainerColor = Color.Transparent
-            ),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 8.dp)
-        ) {
-            itemslevel("Қазақ хандығы кезеңі")
-        }
-    }
-}
 @Composable
 fun itemslevel(name:String) {
     Card(

@@ -54,7 +54,7 @@ import com.baglan.tarihtanbasy.screens.FullInformation
 
 import com.baglan.tarihtanbasy.screens.Info
 import com.baglan.tarihtanbasy.screens.MainScreen
-import com.baglan.tarihtanbasy.screens.Screenfor2
+
 import com.baglan.tarihtanbasy.screens.SecondMain
 import com.baglan.tarihtanbasy.screens.testpage
 import com.baglan.tarihtanbasy.ui.theme.backcolor
@@ -84,7 +84,7 @@ class MainActivity : ComponentActivity() {
                 bottomitem("back" , R.drawable.back, "toback")
             )
             Scaffold(modifier = Modifier.fillMaxSize().background(brush = Brush.linearGradient(
-                colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                 start = Offset.Zero,
                 end = Offset.Infinite
             )) ,
@@ -112,7 +112,7 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(Brush.linearGradient(
-                                    colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                                    colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                                     start = Offset.Zero,
                                     end = Offset.Infinite
                                 ))
@@ -121,15 +121,15 @@ class MainActivity : ComponentActivity() {
                         }
 
                     }
-                    composable("secondmain") {
-                        Screenfor2(navController)
-                    }
+//                    composable("secondmain") {
+//                        Screenfor2(navController)
+//                    }
                     composable("home") {
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(Brush.linearGradient(
-                                    colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                                    colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                                     start = Offset.Zero,
                                     end = Offset.Infinite
                                 ))
@@ -143,7 +143,7 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(Brush.linearGradient(
-                                    colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                                    colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                                     start = Offset.Zero,
                                     end = Offset.Infinite
                                 ))
@@ -157,21 +157,20 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(Brush.linearGradient(
-                                    colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                                    colors =listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                                     start = Offset.Zero,
                                     end = Offset.Infinite
                                 ))
                         ) {
                             FullInformation(this@MainActivity ,navController)
                         }
-
                     }
                     composable("info") {
                         Column(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(Brush.linearGradient(
-                                    colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                                    colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                                     start = Offset.Zero,
                                     end = Offset.Infinite
                                 ))
@@ -185,7 +184,7 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(Brush.linearGradient(
-                                    colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                                    colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                                     start = Offset.Zero,
                                     end = Offset.Infinite
                                 ))
@@ -199,7 +198,7 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(Brush.linearGradient(
-                                    colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+                                    colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
                                     start = Offset.Zero,
                                     end = Offset.Infinite
                                 ))
@@ -239,7 +238,7 @@ fun MyTopAppBar(navController: NavController) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
-                            text = "ТАРИХ",
+                            text = "Tarih",
                             fontFamily = FontFamily(Font(R.font.lora)),
                             fontSize = 35.sp,
                             fontWeight = FontWeight.W800,
@@ -248,16 +247,10 @@ fun MyTopAppBar(navController: NavController) {
                         Image(
                             painterResource(R.drawable.tas),
                             contentDescription = "tas",
-                            modifier = Modifier.size(35.dp)
+                            modifier = Modifier.size(50.dp)
                         )
                     }
-                    Text(
-                        text = "ТАҢБАСЫ",
-                        fontFamily = FontFamily(Font(R.font.lora)),
-                        fontSize = 25.sp,
-                        fontWeight = FontWeight.W700,
-                        color = Color.White
-                    )
+
                 }
             }
         },
@@ -301,7 +294,7 @@ fun MyBottomNavigation(listofbottom: List<bottomitem>, currenroute: String?, nav
                     Image(painterResource(nav.img) , "imgs" ,
                         contentScale = ContentScale.Inside,
                         modifier = Modifier
-                            .size(50.dp)
+                            .size(60.dp)
                             .padding(8.dp))
                 } ,
                 label = {

@@ -43,7 +43,7 @@ import com.baglan.tarihtanbasy.ui.theme.colorinsta
 fun Info(context: Context ) {
     Column(modifier = Modifier.fillMaxWidth().
     background(brush = Brush.linearGradient(
-        colors = listOf(Color(0xFF5DE0E6), Color(0xFF004AAD)),
+        colors = listOf(Color(0xFFF4E1C1), Color(0xFFB8860B)),
         start = androidx.compose.ui.geometry.Offset.Zero,
         end = androidx.compose.ui.geometry.Offset.Infinite))
         .verticalScroll(rememberScrollState())
@@ -78,9 +78,9 @@ fun Info(context: Context ) {
 
 
 
-        line("Жусупова Гулмира Куракбаевна \n" +
-                "76 Жалпы Білім беретін мектептің \nтарих пәні мұғалімі," +
-                "\nСанаты: педагог- зерттеуші")
+//        line("Жусупова Гулмира Куракбаевна \n" +
+//                "76 Жалпы Білім беретін мектептің \nтарих пәні мұғалімі," +
+//                "\nСанаты: педагог- зерттеуші")
 
 
 
